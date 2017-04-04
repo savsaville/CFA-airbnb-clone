@@ -1,0 +1,266 @@
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20170403225525)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170403225525"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRooms (20170403225909)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "rooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "price" decimal, "capacity" integer, "bathrooms" integer, "user_id" integer, "pets" boolean, "smoking" boolean, "wifi" boolean, "bath" boolean, "share" boolean, "parties" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_rooms_on_user_id" ON "rooms" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170403225909"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddImagesToRooms (20170404002401)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "rooms" ADD "images" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170404002401"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-04-04 00:49:02 UTC], ["updated_at", 2017-04-04 00:49:02 UTC]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_rooms_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_rooms_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for ::1 at 2017-04-04 10:49:31 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 113ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-04-04 10:49:31 +1000
+Processing by PagesController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-04-04 10:49:32 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/devise-4.2.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/devise-4.2.1/app/views/devise/shared/_links.html.erb (1.9ms)
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/devise-4.2.1/app/views/devise/sessions/new.html.erb within layouts/application (53.5ms)
+  Rendered partials/_nav.html.erb (0.5ms)
+Completed 200 OK in 6403ms (Views: 6375.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-04-04 10:49:42 +1000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/devise-4.2.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/devise-4.2.1/app/views/devise/shared/_links.html.erb (6.5ms)
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/devise-4.2.1/app/views/devise/registrations/new.html.erb within layouts/application (25.2ms)
+  Rendered partials/_nav.html.erb (0.5ms)
+Completed 200 OK in 124ms (Views: 120.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-04-04 10:49:48 +1000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LkR2bw5tHci1BWgfx3ZbLyCZcOtOESHBK/g9Rvt2VEIcAsaRCjTItZ5cOuBDOnH2MgIcXsgxRkjt8D0LFzcALw==", "user"=>{"email"=>"richiemaccaw@god.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "richiemaccaw@god.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "richiemaccaw@god.com"], ["encrypted_password", "$2a$11$DhHq9sjkXMe3jayeZ.HdDOooOMTuXWl.0P9xdVhO2z1YSDGgZaVcq"], ["created_at", 2017-04-04 00:49:49 UTC], ["updated_at", 2017-04-04 00:49:49 UTC]]
+  [1m[35m (23.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-04-04 00:49:49 UTC], ["last_sign_in_at", 2017-04-04 00:49:49 UTC], ["current_sign_in_ip", "::1"], ["last_sign_in_ip", "::1"], ["updated_at", 2017-04-04 00:49:49 UTC], ["id", 1]]
+  [1m[35m (17.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 525ms (ActiveRecord: 44.5ms)
+
+
+Started GET "/" for ::1 at 2017-04-04 10:49:49 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 84ms (Views: 79.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rooms" for ::1 at 2017-04-04 10:49:57 +1000
+Processing by RoomsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  Rendered rooms/index.html.erb within layouts/application (4.9ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 151ms (Views: 94.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/rooms/new" for ::1 at 2017-04-04 10:50:01 +1000
+Processing by RoomsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rooms/new.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (22.3ms)
+  Rendered rooms/new.html.erb within layouts/application (27.3ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 140ms (Views: 92.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/rooms" for ::1 at 2017-04-04 10:51:17 +1000
+Processing by RoomsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y1B+LwpDtkRTTWiDkKdDGl6aw65rVcjoEAPHNKYBOcUEq/hlDfIG2jmW00Ke/Th2MOdDnCZhwTQfbHUXy5tYoQ==", "room"=>{"title"=>"Mansion", "description"=>"Very big house", "price"=>"1000", "capacity"=>"10", "bathrooms"=>"1", "pets"=>"0", "smoking"=>"0", "wifi"=>"0", "bath"=>"0", "share"=>"0", "parties"=>"0", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007fa73c77e3c8 @tempfile=#<Tempfile:/var/folders/4m/vtbfyngs7fl3hbfsmvp49bsm0000gp/T/RackMultipart20170404-16233-18acpkk.jpg>, @original_filename="mansion2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"room[images][]\"; filename=\"mansion2.jpg\"\r\nContent-Type: image/jpeg\r\n">, #<ActionDispatch::Http::UploadedFile:0x007fa73c77e3a0 @tempfile=#<Tempfile:/var/folders/4m/vtbfyngs7fl3hbfsmvp49bsm0000gp/T/RackMultipart20170404-16233-6srlmi.jpg>, @original_filename="mansion1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"room[images][]\"; filename=\"mansion1.jpg\"\r\nContent-Type: image/jpeg\r\n">]}, "commit"=>"Create Room"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (16.7ms)[0m  [1m[32mINSERT INTO "rooms" ("title", "description", "price", "capacity", "bathrooms", "user_id", "pets", "smoking", "wifi", "bath", "share", "parties", "created_at", "updated_at", "images") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Mansion"], ["description", "Very big house"], ["price", 0.1e4], ["capacity", 10], ["bathrooms", 1], ["user_id", 1], ["pets", false], ["smoking", false], ["wifi", false], ["bath", false], ["share", false], ["parties", false], ["created_at", 2017-04-04 00:51:17 UTC], ["updated_at", 2017-04-04 00:51:17 UTC], ["images", "[\"mansion2.jpg\",\"mansion1.jpg\"]"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/rooms/1
+Completed 302 Found in 72ms (ActiveRecord: 18.7ms)
+
+
+Started GET "/rooms/1" for ::1 at 2017-04-04 10:51:17 +1000
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered rooms/show.html.erb within layouts/application (38.9ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 150ms (Views: 116.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/rooms" for ::1 at 2017-04-04 10:51:27 +1000
+Processing by RoomsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (5.0ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered rooms/index.html.erb within layouts/application (19.9ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 139ms (Views: 128.4ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/rooms/1" for ::1 at 2017-04-04 10:51:29 +1000
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered rooms/show.html.erb within layouts/application (15.4ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 161ms (Views: 152.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rooms" for ::1 at 2017-04-04 10:51:33 +1000
+Processing by RoomsController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered rooms/index.html.erb within layouts/application (10.7ms)
+  Rendered partials/_nav.html.erb (0.5ms)
+Completed 200 OK in 132ms (Views: 123.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/rooms/new" for ::1 at 2017-04-04 10:51:57 +1000
+Processing by RoomsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rooms/new.html.erb within layouts/application
+  Rendered rooms/_form.html.erb (19.7ms)
+  Rendered rooms/new.html.erb within layouts/application (27.5ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 114ms (Views: 109.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/rooms" for ::1 at 2017-04-04 10:53:24 +1000
+Processing by RoomsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4+L1ANwADocadmnKbxIBwElerfYMPZAHbabg20BqCF0sGXNK27G+GXCt0gthSHqsJyMtxEEJmdtiyVL4LfBpOQ==", "room"=>{"title"=>"Cardboard box", "description"=>"Actual box", "price"=>"1", "capacity"=>"1", "bathrooms"=>"0", "pets"=>"0", "smoking"=>"0", "wifi"=>"0", "bath"=>"0", "share"=>"0", "parties"=>"0", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007fa73d653ab0 @tempfile=#<Tempfile:/var/folders/4m/vtbfyngs7fl3hbfsmvp49bsm0000gp/T/RackMultipart20170404-16233-8zfcnb.png>, @original_filename="box2.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"room[images][]\"; filename=\"box2.png\"\r\nContent-Type: image/png\r\n">, #<ActionDispatch::Http::UploadedFile:0x007fa73d653a88 @tempfile=#<Tempfile:/var/folders/4m/vtbfyngs7fl3hbfsmvp49bsm0000gp/T/RackMultipart20170404-16233-twqtg.jpg>, @original_filename="box1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"room[images][]\"; filename=\"box1.jpg\"\r\nContent-Type: image/jpeg\r\n">]}, "commit"=>"Create Room"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "rooms" ("title", "description", "price", "capacity", "bathrooms", "user_id", "pets", "smoking", "wifi", "bath", "share", "parties", "created_at", "updated_at", "images") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cardboard box"], ["description", "Actual box"], ["price", 0.1e1], ["capacity", 1], ["bathrooms", 0], ["user_id", 1], ["pets", false], ["smoking", false], ["wifi", false], ["bath", false], ["share", false], ["parties", false], ["created_at", 2017-04-04 00:53:24 UTC], ["updated_at", 2017-04-04 00:53:24 UTC], ["images", "[\"box2.png\",\"box1.jpg\"]"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/rooms/2
+Completed 302 Found in 23ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/rooms/2" for ::1 at 2017-04-04 10:53:24 +1000
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.1ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered rooms/show.html.erb within layouts/application (3.7ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 142ms (Views: 117.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rooms" for ::1 at 2017-04-04 10:53:30 +1000
+Processing by RoomsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered rooms/index.html.erb within layouts/application (9.4ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 126ms (Views: 78.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rooms" for ::1 at 2017-04-04 10:53:36 +1000
+Processing by RoomsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered rooms/index.html.erb within layouts/application (11.5ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 134ms (Views: 128.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/rooms" for ::1 at 2017-04-04 10:53:38 +1000
+Processing by RoomsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rooms/index.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered rooms/index.html.erb within layouts/application (6.7ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 107ms (Views: 101.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-04-04 10:53:39 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 110ms (Views: 90.4ms | ActiveRecord: 0.3ms)
+
+
