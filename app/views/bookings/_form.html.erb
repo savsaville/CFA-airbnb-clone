@@ -28,7 +28,18 @@
 
   <div class="field">
     <!-- <%= f.label :room_id %> -->
-    <%= f.hidden_field :room_id, value: params[:room_id] %>
+    <% if params[:room_id].present? %>
+      <%= f.hidden_field :room_id, value: params[:room_id] %>
+    <% end %>
+  </div>
+
+  <p>If you own this booking:</p>
+
+  <div class="field">
+    <%= f.label :approved %>
+    <%= f.check_box :approved %>
+
+
   </div>
 
   <!-- <div class="field">

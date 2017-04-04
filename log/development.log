@@ -593,3 +593,620 @@ Processing by BookingsController#show as HTML
 Completed 200 OK in 101ms (Views: 94.1ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/bookings/1" for ::1 at 2017-04-04 11:34:09 +1000
+Processing by BookingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering bookings/show.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered bookings/show.html.erb within layouts/application (4.3ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 96ms (Views: 90.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/bookings/1" for ::1 at 2017-04-04 11:34:32 +1000
+Processing by BookingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering bookings/show.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered bookings/show.html.erb within layouts/application (6.7ms)
+  Rendered partials/_nav.html.erb (2.2ms)
+Completed 200 OK in 106ms (Views: 100.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bookings/1" for ::1 at 2017-04-04 11:35:09 +1000
+Processing by BookingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering bookings/show.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered bookings/show.html.erb within layouts/application (5.9ms)
+  Rendered partials/_nav.html.erb (0.4ms)
+Completed 200 OK in 173ms (Views: 159.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bookings/1" for ::1 at 2017-04-04 11:35:20 +1000
+Processing by BookingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering bookings/show.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered bookings/show.html.erb within layouts/application (5.6ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 97ms (Views: 92.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 11:39:43 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  Rendered pages/host_dashboard.html.erb within layouts/application (1.5ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 572ms (Views: 519.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 11:43:06 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (26.2ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 164ms (Views: 101.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 11:45:50 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (1.8ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 112ms (Views: 106.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 11:46:48 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  Rendered pages/host_dashboard.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/Users/richardsaville/Documents/airbnbfresh/app/views/pages/host_dashboard.html.erb:45: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/pages/host_dashboard.html.erb:45: syntax error, unexpected keyword_ensure, expecting keyword_end
+  Rendering /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.0ms)
+  Rendering /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (144.3ms)
+Started GET "/hostdashboard" for ::1 at 2017-04-04 11:47:02 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (3.2ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 95ms (Views: 89.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 11:47:59 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (3.9ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 102ms (Views: 95.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 11:48:33 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (4.8ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 90ms (Views: 83.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 11:58:57 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (39.1ms)
+  Rendered partials/_nav.html.erb (0.6ms)
+Completed 200 OK in 121ms (Views: 113.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 12:00:31 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (8.7ms)
+  Rendered partials/_nav.html.erb (0.5ms)
+Completed 200 OK in 165ms (Views: 157.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 12:01:05 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (7.1ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 105ms (Views: 87.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rooms/1" for ::1 at 2017-04-04 12:01:29 +1000
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered rooms/show.html.erb within layouts/application (12.5ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 133ms (Views: 116.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rooms/2" for ::1 at 2017-04-04 12:01:39 +1000
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.1ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered rooms/show.html.erb within layouts/application (11.5ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 123ms (Views: 110.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rooms/1" for ::1 at 2017-04-04 12:01:48 +1000
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered rooms/show.html.erb within layouts/application (8.7ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 151ms (Views: 144.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 12:03:22 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (10.0ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 107ms (Views: 101.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 12:03:43 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (7.8ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 89ms (Views: 82.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bookings/1/edit" for ::1 at 2017-04-04 12:03:54 +1000
+Processing by BookingsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering bookings/edit.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (290.3ms)
+  Rendered bookings/edit.html.erb within layouts/application (293.2ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 437ms (Views: 382.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 12:05:38 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (10.1ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 116ms (Views: 107.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/bookings/1/edit" for ::1 at 2017-04-04 12:05:54 +1000
+Processing by BookingsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering bookings/edit.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (74.8ms)
+  Rendered bookings/edit.html.erb within layouts/application (79.3ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 167ms (Views: 159.8ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/bookings/1" for ::1 at 2017-04-04 12:06:03 +1000
+Processing by BookingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7m/KVfzyFvxYS6/mp4RNKpwPUmwlZhridH0VOXRQN1ojyZfZl8ra/TNEG3fYqSAIQYtGhxQHjq6/iyDWg6/VzQ==", "booking"=>{"start_date(1i)"=>"2017", "start_date(2i)"=>"4", "start_date(3i)"=>"13", "end_date(1i)"=>"2017", "end_date(2i)"=>"4", "end_date(3i)"=>"14", "guest_number"=>"1", "room_id"=>"", "approved"=>"1"}, "commit"=>"Update Booking", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: approved
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "bookings" SET "room_id" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["room_id", nil], ["updated_at", 2017-04-04 02:06:03 UTC], ["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/bookings/1
+Completed 302 Found in 12ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/bookings/1" for ::1 at 2017-04-04 12:06:03 +1000
+Processing by BookingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering bookings/show.html.erb within layouts/application
+  Rendered bookings/show.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    17: 
+    18: <p>
+    19:   <strong>Room:</strong>
+    20:   <%= @booking.room.title %>
+    21: </p>
+    22: 
+    23: <p>
+  
+app/views/bookings/show.html.erb:20:in `_app_views_bookings_show_html_erb___958224948988065666_70095512636480'
+  Rendering /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.1ms)
+  Rendering /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (122.7ms)
+Started GET "/bookings/1" for ::1 at 2017-04-04 12:06:33 +1000
+Processing by BookingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering bookings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered bookings/show.html.erb within layouts/application (5.5ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 120ms (Views: 112.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bookings/1" for ::1 at 2017-04-04 12:07:47 +1000
+Processing by BookingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering bookings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered bookings/show.html.erb within layouts/application (2.8ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 86ms (Views: 80.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/bookings" for ::1 at 2017-04-04 12:07:51 +1000
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (9.4ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 123ms (Views: 117.2ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" ORDER BY "bookings"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" ORDER BY "bookings"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/hostdashboard" for ::1 at 2017-04-04 12:10:10 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (6.3ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 88ms (Views: 81.7ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "bookings" SET "room_id" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["room_id", 2], ["updated_at", 2017-04-04 02:11:45 UTC], ["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/hostdashboard" for ::1 at 2017-04-04 12:11:49 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (9.2ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 109ms (Views: 101.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bookings/1/edit" for ::1 at 2017-04-04 12:12:51 +1000
+Processing by BookingsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering bookings/edit.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (374.9ms)
+  Rendered bookings/edit.html.erb within layouts/application (377.9ms)
+Completed 500 Internal Server Error in 450ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `id' for #<#<Class:0x007f80c3b49448>:0x007f80c4323920>):
+    28: 
+    29:   <div class="field">
+    30:     <!-- <%= f.label :room_id %> -->
+    31:     <% if params[room:id].present? %>
+    32:     <%= f.hidden_field :room_id, value: params[:room_id] %>
+    33:     <% end %>
+    34:   </div>
+  
+app/views/bookings/_form.html.erb:31:in `block in _app_views_bookings__form_html_erb__560289219589746844_70095507937400'
+app/views/bookings/_form.html.erb:1:in `_app_views_bookings__form_html_erb__560289219589746844_70095507937400'
+app/views/bookings/edit.html.erb:3:in `_app_views_bookings_edit_html_erb__3896001145874210900_70095507967840'
+  Rendering /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (38.5ms)
+  Rendering /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.9ms)
+  Rendering /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (148.0ms)
+Started GET "/bookings/1/edit" for ::1 at 2017-04-04 12:14:03 +1000
+Processing by BookingsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering bookings/edit.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (8.7ms)
+  Rendered bookings/edit.html.erb within layouts/application (12.2ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 110ms (Views: 104.8ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/bookings/1" for ::1 at 2017-04-04 12:14:07 +1000
+Processing by BookingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y4bcylM3chA6TGLrVrHAmQ9JD7/5CCH8cGbdIVqZOgg//ntBNmTjjWe0+HFzoTirwv/b7a3qGHwvVeDH17oO5Q==", "booking"=>{"start_date(1i)"=>"2017", "start_date(2i)"=>"4", "start_date(3i)"=>"13", "end_date(1i)"=>"2017", "end_date(2i)"=>"4", "end_date(3i)"=>"14", "guest_number"=>"1", "approved"=>"1"}, "commit"=>"Update Booking", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "bookings" SET "approved" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["approved", true], ["updated_at", 2017-04-04 02:14:07 UTC], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/bookings/1
+Completed 302 Found in 16ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/bookings/1" for ::1 at 2017-04-04 12:14:07 +1000
+Processing by BookingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering bookings/show.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered bookings/show.html.erb within layouts/application (53.1ms)
+  Rendered partials/_nav.html.erb (0.7ms)
+Completed 200 OK in 177ms (Views: 168.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/bookings" for ::1 at 2017-04-04 12:14:11 +1000
+Processing by BookingsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered bookings/index.html.erb within layouts/application (29.7ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 175ms (Views: 167.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/dashboard" for ::1 at 2017-04-04 12:14:16 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/dashboard"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [33 times] (62.4ms)
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.0ms)
+  Rendering /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/richardsaville/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (201.2ms)
+Started GET "/hostdashboard" for ::1 at 2017-04-04 12:14:24 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (15.0ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 104ms (Views: 96.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 12:19:11 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (51.5ms)
+  Rendered partials/_nav.html.erb (0.5ms)
+Completed 200 OK in 234ms (Views: 190.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 12:19:14 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (29.4ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 187ms (Views: 177.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/guestdashboard" for ::1 at 2017-04-04 12:19:16 +1000
+Processing by PagesController#guest_dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/guest_dashboard.html.erb within layouts/application
+  Rendered pages/guest_dashboard.html.erb within layouts/application (0.5ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 121ms (Views: 104.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 12:19:18 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.8ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (24.1ms)
+  Rendered partials/_nav.html.erb (1.0ms)
+Completed 200 OK in 173ms (Views: 163.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 13:20:53 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (7.9ms)
+  Rendered partials/_nav.html.erb (0.6ms)
+Completed 200 OK in 117ms (Views: 110.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 13:22:16 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (9.0ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 99ms (Views: 92.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 13:24:42 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (8.2ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 92ms (Views: 85.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/rooms/1" for ::1 at 2017-04-04 13:24:45 +1000
+Processing by RoomsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering rooms/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered rooms/show.html.erb within layouts/application (9.8ms)
+  Rendered partials/_nav.html.erb (0.9ms)
+Completed 200 OK in 151ms (Views: 128.2ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/guestdashboard" for ::1 at 2017-04-04 13:25:20 +1000
+Processing by PagesController#guest_dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/guest_dashboard.html.erb within layouts/application
+  Rendered pages/guest_dashboard.html.erb within layouts/application (1.0ms)
+  Rendered partials/_nav.html.erb (0.6ms)
+Completed 200 OK in 144ms (Views: 131.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/hostdashboard" for ::1 at 2017-04-04 13:25:21 +1000
+Processing by PagesController#host_dashboard as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/host_dashboard.html.erb within layouts/application
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."room_id" = ?[0m  [["room_id", 2]]
+  Rendered pages/host_dashboard.html.erb within layouts/application (14.3ms)
+  Rendered partials/_nav.html.erb (0.8ms)
+Completed 200 OK in 158ms (Views: 149.0ms | ActiveRecord: 1.1ms)
+
+
