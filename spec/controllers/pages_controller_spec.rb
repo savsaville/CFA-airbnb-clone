@@ -2,6 +2,25 @@ require 'rails_helper'
 
 RSpec.describe PagesController, type: :controller do
 
+
+describe "using fixtures" do
+
+  fixtures :users, :rooms, :bookings
+
+  it "user is valid" do
+    user = users(:sav)
+    room = rooms(:sydney)
+    booking = bookings(:jamies_booking)
+  require 'pry'; binding.pry
+  end
+
+
+end
+
+
+
+
+
   describe "GET #guest_dashboard" do
 
   	describe "unauthenticated user" do
