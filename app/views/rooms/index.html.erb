@@ -2,7 +2,7 @@
 
 <h1>Rooms</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
@@ -29,16 +29,16 @@
         <td><%= room.price %></td>
         <td><%= room.capacity %></td>
         <td><%= room.bathrooms %></td>
-        <td><%= room.user %></td>
+        <td><%= room.user.email %></td>
         <td><%= yes_no(room.pets) %></td>
         <td><%= yes_no(room.smoking) %></td>
         <td><%= yes_no(room.wifi) %></td>
         <td><%= yes_no(room.bath) %></td>
         <td><%= yes_no(room.share) %></td>
         <td><%= yes_no(room.parties) %></td>
-        <td><%= link_to 'Show', room %></td>
-        <td><%= link_to 'Edit', edit_room_path(room) %></td>
-        <td><%= link_to 'Delete', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'See Room', room %></td>
+        <td><%= link_to 'Edit Room', edit_room_path(room) %></td>
+        <td><%= link_to 'Delete Room', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
