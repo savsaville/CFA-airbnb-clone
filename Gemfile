@@ -26,6 +26,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'pry'
   gem 'faker'
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development do

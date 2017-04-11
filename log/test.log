@@ -744,3 +744,492 @@ Completed 200 OK in 59ms (Views: 17.4ms | ActiveRecord: 0.0ms)
   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (15.0ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (6.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('sav@mann.net', '2017-04-11 01:42:12.684483', '2017-04-11 01:42:12.684483', 745964021)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('jamie@coder.com', '2017-04-11 01:42:12.684483', '2017-04-11 01:42:12.684483', 533861854)[0m
+  [1m[36mFixture Delete (0.9ms)[0m  [1m[31mDELETE FROM "rooms"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "rooms" ("title", "created_at", "updated_at", "id", "user_id") VALUES ('Room:21', '2017-04-11 01:42:12.710605', '2017-04-11 01:42:12.710605', 266898550, 745964021)[0m
+  [1m[36mFixture Delete (0.9ms)[0m  [1m[31mDELETE FROM "bookings"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("approved", "created_at", "updated_at", "id", "room_id", "user_id") VALUES ('t', '2017-04-11 01:42:12.716062', '2017-04-11 01:42:12.716062', 248908062, 266898550, 533861854)[0m
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by PagesController#guest_dashboard as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "me@cf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "me@cf.com"], ["sign_in_count", 1], ["current_sign_in_at", 2017-04-11 01:45:02 UTC], ["last_sign_in_at", 2017-04-11 01:45:02 UTC], ["current_sign_in_ip", "0.0.0.0"], ["last_sign_in_ip", "0.0.0.0"], ["created_at", 2017-04-11 01:45:02 UTC], ["updated_at", 2017-04-11 01:45:02 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 745964022], ["created_at", 2017-04-11 01:45:03 UTC], ["updated_at", 2017-04-11 01:45:03 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "created_at", "updated_at", "approved") VALUES (?, ?, ?, ?)[0m  [["user_id", 745964022], ["created_at", 2017-04-11 01:45:03 UTC], ["updated_at", 2017-04-11 01:45:03 UTC], ["approved", true]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", 2017-04-11 01:45:03 UTC], ["updated_at", 2017-04-11 01:45:03 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("created_at", "updated_at", "approved") VALUES (?, ?, ?)[0m  [["created_at", 2017-04-11 01:45:03 UTC], ["updated_at", 2017-04-11 01:45:03 UTC], ["approved", true]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PagesController#guest_dashboard as HTML
+  Rendering pages/guest_dashboard.html.erb within layouts/application
+  Rendered pages/guest_dashboard.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ?[0m  [["user_id", 745964022]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND "bookings"."approved" = ?[0m  [["user_id", 745964022], ["approved", false]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND "bookings"."approved" = ? AND "bookings"."paid" = ?[0m  [["user_id", 745964022], ["approved", true], ["paid", false]]
+  [1m[35m (15.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "rooms" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "abc"], ["created_at", 2017-04-11 01:45:03 UTC], ["updated_at", 2017-04-11 01:45:03 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (2.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('sav@reynolds.org', '2017-04-11 01:49:21.116589', '2017-04-11 01:49:21.116589', 745964021)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('jamie@coder.com', '2017-04-11 01:49:21.116589', '2017-04-11 01:49:21.116589', 533861854)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "rooms"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "rooms" ("title", "created_at", "updated_at", "id", "user_id") VALUES ('Room:58', '2017-04-11 01:49:21.124072', '2017-04-11 01:49:21.124072', 266898550, 745964021)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "bookings"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("approved", "created_at", "updated_at", "id", "room_id", "user_id") VALUES ('t', '2017-04-11 01:49:21.128001', '2017-04-11 01:49:21.128001', 248908062, 266898550, 533861854)[0m
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by PagesController#guest_dashboard as HTML
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "me@cf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "me@cf.com"], ["sign_in_count", 1], ["current_sign_in_at", 2017-04-11 01:49:23 UTC], ["last_sign_in_at", 2017-04-11 01:49:23 UTC], ["current_sign_in_ip", "0.0.0.0"], ["last_sign_in_ip", "0.0.0.0"], ["created_at", 2017-04-11 01:49:23 UTC], ["updated_at", 2017-04-11 01:49:23 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 745964022], ["created_at", 2017-04-11 01:49:23 UTC], ["updated_at", 2017-04-11 01:49:23 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "created_at", "updated_at", "approved") VALUES (?, ?, ?, ?)[0m  [["user_id", 745964022], ["created_at", 2017-04-11 01:49:23 UTC], ["updated_at", 2017-04-11 01:49:23 UTC], ["approved", true]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", 2017-04-11 01:49:23 UTC], ["updated_at", 2017-04-11 01:49:23 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bookings" ("created_at", "updated_at", "approved") VALUES (?, ?, ?)[0m  [["created_at", 2017-04-11 01:49:23 UTC], ["updated_at", 2017-04-11 01:49:23 UTC], ["approved", true]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PagesController#guest_dashboard as HTML
+  Rendering pages/guest_dashboard.html.erb within layouts/application
+  Rendered pages/guest_dashboard.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 40ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ?[0m  [["user_id", 745964022]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND "bookings"."approved" = ?[0m  [["user_id", 745964022], ["approved", false]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND "bookings"."approved" = ? AND "bookings"."paid" = ?[0m  [["user_id", 745964022], ["approved", true], ["paid", false]]
+  [1m[35m (1.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('sav@kunze.com', '2017-04-11 01:50:43.085545', '2017-04-11 01:50:43.085545', 745964021)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('jamie@coder.com', '2017-04-11 01:50:43.085545', '2017-04-11 01:50:43.085545', 533861854)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "rooms"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "rooms" ("title", "created_at", "updated_at", "id", "user_id") VALUES ('Room:70', '2017-04-11 01:50:43.089891', '2017-04-11 01:50:43.089891', 266898550, 745964021)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "bookings"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("approved", "created_at", "updated_at", "id", "room_id", "user_id") VALUES ('t', '2017-04-11 01:50:43.093441', '2017-04-11 01:50:43.093441', 248908062, 266898550, 533861854)[0m
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+Processing by PagesController#guest_dashboard as HTML
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "me@cf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "me@cf.com"], ["sign_in_count", 1], ["current_sign_in_at", 2017-04-11 01:50:46 UTC], ["last_sign_in_at", 2017-04-11 01:50:46 UTC], ["current_sign_in_ip", "0.0.0.0"], ["last_sign_in_ip", "0.0.0.0"], ["created_at", 2017-04-11 01:50:46 UTC], ["updated_at", 2017-04-11 01:50:46 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 745964022], ["created_at", 2017-04-11 01:50:46 UTC], ["updated_at", 2017-04-11 01:50:46 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "created_at", "updated_at", "approved") VALUES (?, ?, ?, ?)[0m  [["user_id", 745964022], ["created_at", 2017-04-11 01:50:46 UTC], ["updated_at", 2017-04-11 01:50:46 UTC], ["approved", true]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", 2017-04-11 01:50:46 UTC], ["updated_at", 2017-04-11 01:50:46 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("created_at", "updated_at", "approved") VALUES (?, ?, ?)[0m  [["created_at", 2017-04-11 01:50:46 UTC], ["updated_at", 2017-04-11 01:50:46 UTC], ["approved", true]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PagesController#guest_dashboard as HTML
+  Rendering pages/guest_dashboard.html.erb within layouts/application
+  Rendered pages/guest_dashboard.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 31ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ?[0m  [["user_id", 745964022]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND "bookings"."approved" = ?[0m  [["user_id", 745964022], ["approved", false]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND "bookings"."approved" = ? AND "bookings"."paid" = ?[0m  [["user_id", 745964022], ["approved", true], ["paid", false]]
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('sav@swaniawskikris.biz', '2017-04-11 01:51:07.975606', '2017-04-11 01:51:07.975606', 745964021)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('jamie@coder.com', '2017-04-11 01:51:07.975606', '2017-04-11 01:51:07.975606', 533861854)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "rooms"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "rooms" ("title", "created_at", "updated_at", "id", "user_id") VALUES ('Room:9', '2017-04-11 01:51:07.981534', '2017-04-11 01:51:07.981534', 266898550, 745964021)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "bookings"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("approved", "created_at", "updated_at", "id", "room_id", "user_id") VALUES ('t', '2017-04-11 01:51:07.985256', '2017-04-11 01:51:07.985256', 248908062, 266898550, 533861854)[0m
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by PagesController#guest_dashboard as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "me@cf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "me@cf.com"], ["sign_in_count", 1], ["current_sign_in_at", 2017-04-11 01:51:10 UTC], ["last_sign_in_at", 2017-04-11 01:51:10 UTC], ["current_sign_in_ip", "0.0.0.0"], ["last_sign_in_ip", "0.0.0.0"], ["created_at", 2017-04-11 01:51:10 UTC], ["updated_at", 2017-04-11 01:51:10 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 745964022], ["created_at", 2017-04-11 01:51:10 UTC], ["updated_at", 2017-04-11 01:51:10 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "created_at", "updated_at", "approved") VALUES (?, ?, ?, ?)[0m  [["user_id", 745964022], ["created_at", 2017-04-11 01:51:10 UTC], ["updated_at", 2017-04-11 01:51:10 UTC], ["approved", true]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", 2017-04-11 01:51:10 UTC], ["updated_at", 2017-04-11 01:51:10 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("created_at", "updated_at", "approved") VALUES (?, ?, ?)[0m  [["created_at", 2017-04-11 01:51:10 UTC], ["updated_at", 2017-04-11 01:51:10 UTC], ["approved", true]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PagesController#guest_dashboard as HTML
+  Rendering pages/guest_dashboard.html.erb within layouts/application
+  Rendered pages/guest_dashboard.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ?[0m  [["user_id", 745964022]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND "bookings"."approved" = ?[0m  [["user_id", 745964022], ["approved", false]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND "bookings"."approved" = ? AND "bookings"."paid" = ?[0m  [["user_id", 745964022], ["approved", true], ["paid", false]]
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('sav@danielstark.co', '2017-04-11 01:59:37.518181', '2017-04-11 01:59:37.518181', 745964021)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('jamie@coder.com', '2017-04-11 01:59:37.518181', '2017-04-11 01:59:37.518181', 533861854)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "rooms"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "rooms" ("title", "created_at", "updated_at", "id", "user_id") VALUES ('Room:21', '2017-04-11 01:59:37.522850', '2017-04-11 01:59:37.522850', 266898550, 745964021)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "bookings"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("approved", "created_at", "updated_at", "id", "room_id", "user_id") VALUES ('t', '2017-04-11 01:59:37.525819', '2017-04-11 01:59:37.525819', 248908062, 266898550, 533861854)[0m
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by PagesController#guest_dashboard as HTML
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "me@cf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "me@cf.com"], ["sign_in_count", 1], ["current_sign_in_at", 2017-04-11 01:59:37 UTC], ["last_sign_in_at", 2017-04-11 01:59:37 UTC], ["current_sign_in_ip", "0.0.0.0"], ["last_sign_in_ip", "0.0.0.0"], ["created_at", 2017-04-11 01:59:37 UTC], ["updated_at", 2017-04-11 01:59:37 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 745964022], ["created_at", 2017-04-11 01:59:37 UTC], ["updated_at", 2017-04-11 01:59:37 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "created_at", "updated_at", "approved") VALUES (?, ?, ?, ?)[0m  [["user_id", 745964022], ["created_at", 2017-04-11 01:59:37 UTC], ["updated_at", 2017-04-11 01:59:37 UTC], ["approved", true]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bookings" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", 2017-04-11 01:59:37 UTC], ["updated_at", 2017-04-11 01:59:37 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bookings" ("created_at", "updated_at", "approved") VALUES (?, ?, ?)[0m  [["created_at", 2017-04-11 01:59:37 UTC], ["updated_at", 2017-04-11 01:59:37 UTC], ["approved", true]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PagesController#guest_dashboard as HTML
+  Rendering pages/guest_dashboard.html.erb within layouts/application
+  Rendered pages/guest_dashboard.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ?[0m  [["user_id", 745964022]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND "bookings"."approved" = ?[0m  [["user_id", 745964022], ["approved", false]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND "bookings"."approved" = ? AND "bookings"."paid" = ?[0m  [["user_id", 745964022], ["approved", true], ["paid", false]]
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.8ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('sav@dubuque.info', '2017-04-11 01:59:56.861938', '2017-04-11 01:59:56.861938', 745964021)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('jamie@coder.com', '2017-04-11 01:59:56.861938', '2017-04-11 01:59:56.861938', 533861854)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "rooms"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "rooms" ("title", "created_at", "updated_at", "id", "user_id") VALUES ('Room:93', '2017-04-11 01:59:56.867120', '2017-04-11 01:59:56.867120', 266898550, 745964021)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "bookings"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("approved", "created_at", "updated_at", "id", "room_id", "user_id") VALUES ('t', '2017-04-11 01:59:56.871287', '2017-04-11 01:59:56.871287', 248908062, 266898550, 533861854)[0m
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by PagesController#guest_dashboard as HTML
+Completed 401 Unauthorized in 15ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "me@cf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "me@cf.com"], ["sign_in_count", 1], ["current_sign_in_at", 2017-04-11 02:00:29 UTC], ["last_sign_in_at", 2017-04-11 02:00:29 UTC], ["current_sign_in_ip", "0.0.0.0"], ["last_sign_in_ip", "0.0.0.0"], ["created_at", 2017-04-11 02:00:29 UTC], ["updated_at", 2017-04-11 02:00:29 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 745964022], ["created_at", 2017-04-11 02:00:29 UTC], ["updated_at", 2017-04-11 02:00:29 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "created_at", "updated_at", "approved") VALUES (?, ?, ?, ?)[0m  [["user_id", 745964022], ["created_at", 2017-04-11 02:00:29 UTC], ["updated_at", 2017-04-11 02:00:29 UTC], ["approved", true]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bookings" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", 2017-04-11 02:00:29 UTC], ["updated_at", 2017-04-11 02:00:29 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("created_at", "updated_at", "approved") VALUES (?, ?, ?)[0m  [["created_at", 2017-04-11 02:00:29 UTC], ["updated_at", 2017-04-11 02:00:29 UTC], ["approved", true]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PagesController#guest_dashboard as HTML
+  Rendering pages/guest_dashboard.html.erb within layouts/application
+  Rendered pages/guest_dashboard.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 48ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ?[0m  [["user_id", 745964022]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND "bookings"."approved" = ?[0m  [["user_id", 745964022], ["approved", false]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND "bookings"."approved" = ? AND "bookings"."paid" = ?[0m  [["user_id", 745964022], ["approved", true], ["paid", false]]
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('sav@okeefe.name', '2017-04-11 02:00:36.935191', '2017-04-11 02:00:36.935191', 745964021)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('jamie@coder.com', '2017-04-11 02:00:36.935191', '2017-04-11 02:00:36.935191', 533861854)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "rooms"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "rooms" ("title", "created_at", "updated_at", "id", "user_id") VALUES ('Room:89', '2017-04-11 02:00:36.939233', '2017-04-11 02:00:36.939233', 266898550, 745964021)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "bookings"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("approved", "created_at", "updated_at", "id", "room_id", "user_id") VALUES ('t', '2017-04-11 02:00:36.941994', '2017-04-11 02:00:36.941994', 248908062, 266898550, 533861854)[0m
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRoom Load (0.5ms)[0m  [1m[34mSELECT  "rooms".* FROM "rooms" WHERE "rooms"."id" = ? LIMIT ?[0m  [["id", 266898550], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by PagesController#guest_dashboard as HTML
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "me@cf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "me@cf.com"], ["sign_in_count", 1], ["current_sign_in_at", 2017-04-11 02:01:44 UTC], ["last_sign_in_at", 2017-04-11 02:01:44 UTC], ["current_sign_in_ip", "0.0.0.0"], ["last_sign_in_ip", "0.0.0.0"], ["created_at", 2017-04-11 02:01:44 UTC], ["updated_at", 2017-04-11 02:01:44 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 745964022], ["created_at", 2017-04-11 02:01:44 UTC], ["updated_at", 2017-04-11 02:01:44 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "created_at", "updated_at", "approved") VALUES (?, ?, ?, ?)[0m  [["user_id", 745964022], ["created_at", 2017-04-11 02:01:44 UTC], ["updated_at", 2017-04-11 02:01:44 UTC], ["approved", true]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bookings" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", 2017-04-11 02:01:44 UTC], ["updated_at", 2017-04-11 02:01:44 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bookings" ("created_at", "updated_at", "approved") VALUES (?, ?, ?)[0m  [["created_at", 2017-04-11 02:01:44 UTC], ["updated_at", 2017-04-11 02:01:44 UTC], ["approved", true]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PagesController#guest_dashboard as HTML
+  Rendering pages/guest_dashboard.html.erb within layouts/application
+  Rendered pages/guest_dashboard.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ?[0m  [["user_id", 745964022]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND "bookings"."approved" = ?[0m  [["user_id", 745964022], ["approved", false]]
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND "bookings"."approved" = ? AND "bookings"."paid" = ?[0m  [["user_id", 745964022], ["approved", true], ["paid", false]]
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('sav@renner.co', '2017-04-11 02:01:50.583952', '2017-04-11 02:01:50.583952', 745964021)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('jamie@coder.com', '2017-04-11 02:01:50.583952', '2017-04-11 02:01:50.583952', 533861854)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "rooms"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "bookings"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("approved", "created_at", "updated_at", "id", "room_id", "user_id") VALUES ('t', '2017-04-11 02:01:50.588224', '2017-04-11 02:01:50.588224', 248908062, 266898550, 533861854)[0m
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by PagesController#guest_dashboard as HTML
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "me@cf.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "sign_in_count", "current_sign_in_at", "last_sign_in_at", "current_sign_in_ip", "last_sign_in_ip", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "me@cf.com"], ["sign_in_count", 1], ["current_sign_in_at", 2017-04-11 02:01:50 UTC], ["last_sign_in_at", 2017-04-11 02:01:50 UTC], ["current_sign_in_ip", "0.0.0.0"], ["last_sign_in_ip", "0.0.0.0"], ["created_at", 2017-04-11 02:01:50 UTC], ["updated_at", 2017-04-11 02:01:50 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 745964022], ["created_at", 2017-04-11 02:01:50 UTC], ["updated_at", 2017-04-11 02:01:50 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "created_at", "updated_at", "approved") VALUES (?, ?, ?, ?)[0m  [["user_id", 745964022], ["created_at", 2017-04-11 02:01:50 UTC], ["updated_at", 2017-04-11 02:01:50 UTC], ["approved", true]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bookings" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", 2017-04-11 02:01:50 UTC], ["updated_at", 2017-04-11 02:01:50 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "notme@cf.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("created_at", "updated_at", "approved") VALUES (?, ?, ?)[0m  [["created_at", 2017-04-11 02:01:50 UTC], ["updated_at", 2017-04-11 02:01:50 UTC], ["approved", true]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PagesController#guest_dashboard as HTML
+  Rendering pages/guest_dashboard.html.erb within layouts/application
+  Rendered pages/guest_dashboard.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 35ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ?[0m  [["user_id", 745964022]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND "bookings"."approved" = ?[0m  [["user_id", 745964022], ["approved", false]]
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = ? AND "bookings"."approved" = ? AND "bookings"."paid" = ?[0m  [["user_id", 745964022], ["approved", true], ["paid", false]]
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m

@@ -8,9 +8,9 @@ describe "using fixtures" do
   fixtures :users, :rooms, :bookings
 
   it "user is valid" do
-    user = users(:sav)
+    user = build(:user)
     room = rooms(:sydney)
-    booking = bookings(:jamies_booking)
+  #   booking = bookings(:jamies_booking)
   require 'pry'; binding.pry
   end
 

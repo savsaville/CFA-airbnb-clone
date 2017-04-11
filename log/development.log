@@ -5074,3 +5074,22 @@ Processing by BookingsController#show as HTML
 Completed 200 OK in 93ms (Views: 87.4ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for ::1 at 2017-04-11 11:21:15 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.3ms)
+  Rendered partials/_nav.html.erb (1.2ms)
+Completed 200 OK in 553ms (Views: 509.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2017-04-11 11:21:53 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered partials/_nav.html.erb (1.9ms)
+Completed 200 OK in 165ms (Views: 156.9ms | ActiveRecord: 0.9ms)
+
+

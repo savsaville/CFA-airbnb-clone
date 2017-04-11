@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe Room, type: :model do
 
   it "room require a title" do
-    room = Room.create(:title => nil)
+    # room = Room.create(:title => nil)
+    room = build(:room, :title => nil)
     expect(room).to_not be_valid
   end
 
@@ -13,7 +14,8 @@ RSpec.describe Room, type: :model do
   end
 
   it "room require a title of more than 3 characters" do
-    room = Room.create(:title => "abc")
+    # room = Room.create(:title => "abc")
+    room = build(:room)
     expect(room).to be_valid
   end
 
